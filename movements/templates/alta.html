@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+            
+{% block title %} Alta Nueva {% endblock %}
+
+{% block mi_precioso_bloque_de_formato %}
+
+    <form action="creaalta" method="POST">
+        <div class="field">
+            <label for="fecha">Fecha:</label>
+            <input type="date" name='fecha' required>
+        </div>
+        <div class="field">
+            <label for="concetpo">Concepto:</label>
+            <input type="text" name='concepto' required>
+        </div>
+        <div class="field">
+            <label for="cantidad">Cantidad:</label>
+            <input type="number" name="cantidad" step="0.01" required>
+        </div>
+        <div class="field">
+            <input type="submit" value="Aceptar">
+        </div>
+    </form>
+
+{% endblock %}
+
+

@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+            
+{% block title %} Borra Registro {% endblock %}
+
+{% block mi_precioso_bloque_de_formato %}
+
+    <p>Se va a borrar el siguiente registro:</p>
+    <p>{{ r[0] }} - {{ r[1] }} - {{ r[2] }}</p>
+    <form action="delete" method="POST">
+        <input type="hidden" name="id" value="{{ r[3] }}">
+        <input type="submit" value="Borrar">
+        <a href="{{ url_for('listaIngresos') }}">Volver</a>
+    </form>
+
+{% endblock %}

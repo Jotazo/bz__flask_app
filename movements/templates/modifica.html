@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+            
+{% block title %} Modifica Registro {% endblock %}
+
+{% block mi_precioso_bloque_de_formato %}
+
+    <form action="modifica" method="POST">
+        <div class="field">
+            <label for="fecha">Fecha:</label>
+            <input type="date" name='fecha' value="{{ registros[0] }}" required>
+        </div>
+        <div class="field">
+            <label for="concetpo">Concepto:</label>
+            <input type="text" name='concepto' value="{{ registros[1] }}" required>
+        </div>
+        <div class="field">
+            <label for="cantidad">Cantidad:</label>
+            <input type="number" name="cantidad" step="0.01" value="{{ registros[2] }}" required>
+        </div>
+        <div class="field">
+            <input type="submit" value="Modificar">
+            <input type="hidden" name="id" value="{{ registros[3] }}">
+        </div>
+    </form>
+
+{% endblock %}
